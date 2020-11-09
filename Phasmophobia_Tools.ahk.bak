@@ -47,10 +47,10 @@ Loop, read, ItemsPhasmophobia.csv
 }
 
 ;STARTS LOOP FUNCTION TO PROVIDE HOTKEY OPTIONS
-SaveAllPhotos("E:\Steam\steamapps\common\Phasmophobia", "C:\Users\Cliente\Desktop\Phasmophobia_Bot\Pictures")
+SaveAllPhotos("E:\Steam\steamapps\common\Phasmophobia", "C:\Phasmophobia_Bot\Pictures")
 ;AVAILABLE HOTKEYS
 F1::AddAverage()
-F2::CopyPhotos("E:\Steam\steamapps\common\Phasmophobia", "C:\Users\Cliente\Desktop\Phasmophobia_Bot\Pictures")
+F2::CopyPhotos("E:\Steam\steamapps\common\Phasmophobia", "C:\Phasmophobia_Bot\Pictures")
 
 
 
@@ -205,14 +205,14 @@ SaveAllPhotos(path_from, path_to) {
 		5_sec_ago += -5, seconds
 		
 		;LOOKS FOR MATCH END, IF FOUND, FINISHES THE MATCH AND UPDATES MATCH COUNTER
-		ImageSearch, FoundX, FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, *50 C:\Users\Cliente\Desktop\Phasmophobia_Bot\References\Payment.jpg
+		ImageSearch, FoundX, FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, *50 C:\Phasmophobia_Bot\References\Payment.jpg
 		if (FoundX != "" and FoundY != "")
 		{
 			;IF THE END WAS FOUND, CLICK ON RESUME AND LOOK FOR SECOND END
 			mouseclick, left, % A_ScreenWidth/2, % FoundY + 600
 			Sleep, 200
 			;IF SECOND END WAS FOUND, CLICKS ON RESUME AGAIN
-			ImageSearch, FoundX, FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, *50 C:\Users\Cliente\Desktop\Phasmophobia_Bot\References\Experience.jpg
+			ImageSearch, FoundX, FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, *50 C:\Phasmophobia_Bot\References\Experience.jpg
 			if (FoundX != "" and FoundY != "")
 			{
 				;CLICKS ON SECOND RESUME
